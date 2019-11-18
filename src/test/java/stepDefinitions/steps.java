@@ -1,0 +1,60 @@
+package stepDefinitions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.*;
+import pageObjects.homePage;
+import pageObjects.statisticsPage;
+
+public class steps {
+	
+	WebDriver driver;
+	homePage page1;
+	statisticsPage page2;
+
+	@Given("I open Goolge Chrome")
+	public void i_open_Goolge_Chrome() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//Driver/chromedriver");
+		driver = new ChromeDriver();
+		
+		Thread.sleep(500);
+		driver.manage().window().fullscreen();
+
+		page1 = new homePage(driver);
+		page2 = new statisticsPage(driver);
+
+	}
+
+	@Given("I go to Yahoo Finance {string}")
+	public void i_go_to_Yahoo_Finance(String webUrl) {
+		driver.get(webUrl);
+
+	}
+
+	@When("I search for a stock {string}")
+	public void i_search_for_a_stock(String stockName) throws InterruptedException {
+		Thread.sleep(1500);
+		page1.clickOK();
+		Thread.sleep(1500);
+		page1.typeStock(stockName);
+		Thread.sleep(1500);
+		page1.clickSearch();
+		Thread.sleep(1500);
+
+	}
+
+	@When("I go to the statistics tab")
+	public void i_go_to_the_statistics_tab() throws InterruptedException {
+		page2.statisticsTab();
+		Thread.sleep(1500);
+
+	}
+
+	@Then("I get the enterprise value")
+	public void i_get_the_enterprise_value() {
+		page2.getEnterpriseValue();
+		driver.quit();
+	}
+
+}
