@@ -15,7 +15,7 @@ public class steps {
 
 	@Given("I open Goolge Chrome")
 	public void i_open_Goolge_Chrome() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//Driver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		Thread.sleep(500);
