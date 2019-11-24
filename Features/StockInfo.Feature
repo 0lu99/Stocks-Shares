@@ -6,10 +6,11 @@ Feature: Getting Stock Information
     When I search for a stock "<stockName>"
     And I go to the statistics tab
     Then I get the enterprise value
+    Then I close the browser
 
 	Examples:
 		|stockName|
 		| Nike |
 		| Aviva |
-		| Google |
+		| BP |
 		

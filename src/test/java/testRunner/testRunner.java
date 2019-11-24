@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions (
 		features=".//Features/StockInfo.feature",
 		glue="stepDefinitions"
-		//dryRun = false,
+		//dryRun = true
 		//monochrome = true,
 		//plugin = {"pretty", "html: test-output"}
 		)

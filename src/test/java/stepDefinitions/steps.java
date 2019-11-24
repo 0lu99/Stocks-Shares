@@ -1,5 +1,12 @@
 package stepDefinitions;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -33,7 +40,7 @@ public class steps {
 	}
 
 	@When("I search for a stock {string}")
-	public void i_search_for_a_stock(String stockName) throws InterruptedException {
+	public void i_search_for_a_stock(String stockName) throws InterruptedException, IOException {
 		Thread.sleep(1500);
 		page1.clickOK();
 		Thread.sleep(1500);
@@ -52,8 +59,12 @@ public class steps {
 	}
 
 	@Then("I get the enterprise value")
-	public void i_get_the_enterprise_value() {
+	public void i_get_the_enterprise_value() throws IOException {
 		page2.getEnterpriseValue();
+	}
+	
+	@Then("I close the browser")
+	public void i_close_the_browser() throws IOException {
 		driver.quit();
 	}
 
