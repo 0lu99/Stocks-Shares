@@ -46,18 +46,21 @@ public class statisticsPage {
 	WebElement totalCash;
 	
 	
-	/*@FindBy (xpath = "")
+	@FindBy (xpath = "//div[3]/div[1]/div[1]/span[1]")
 	@CacheLookup
-	WebElement ;
+	WebElement currentPrice;
 	
-	@FindBy (xpath = "")
+	@FindBy (xpath = "//div[2]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[7]/td[2]")
 	@CacheLookup
-	WebElement ;
+	WebElement movingAverage200;
 	
-	@FindBy (xpath = "")
+	@FindBy (xpath = "//div[2]/div[1]/div[3]/div[1]/table[1]/tbody[1]/tr[2]/td[2]")
 	@CacheLookup
-	WebElement ;*/
+	WebElement dividendYield;
 	
+	@FindBy (xpath = "//div[3]/div[1]/table[1]/tbody[1]/tr[5]/td[2]")
+	@CacheLookup
+	WebElement averageYield5;
 	
 
 	public statisticsPage(WebDriver driver1) {
@@ -73,6 +76,13 @@ public class statisticsPage {
 		
 		
 		System.out.println(companyName.getText()
+				+"\n"
+				+"\nTrading Information"
+				+"\nStock price " + currentPrice.getText()
+				+"\n200 day average " + movingAverage200.getText()
+				+"\nDividend yield " + movingAverage200.getText()
+				+"\n5 year avg. yield " + averageYield5.getText()
+				+"\n"
 				+"\nValuation Measures"
 				+"\nMarket Cap is " + marketCap.getText()
 				+"\nEnterprise is " + enterpriseValue.getText()
