@@ -10,7 +10,13 @@ Feature: Getting Stock Information
 
 	Examples:
 		|stockName|
-		| Nike |
-		| Aviva |
-		| BP |
+		| Barratt Development |
+		| BT Group |
+		| Verizon |
+		| AT&T |
+		| Shell |
+		| Royal Mail |
+		| Land Securities Group |
+		| British Land |
+		| ABBV |
 		
