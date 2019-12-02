@@ -49,6 +49,10 @@ public class statisticsPage {
 	@FindBy (xpath = "//div[3]/div[1]/table[1]/tbody[1]/tr[5]/td[2]")
 	@CacheLookup
 	WebElement averageYield5;
+	
+	@FindBy (xpath = "//div[3]/div[1]/table[1]/tbody[1]/tr[6]/td[2]")
+	@CacheLookup
+	WebElement payoutRatio;
 
 
 	public statisticsPage(WebDriver driver1) {
@@ -70,6 +74,7 @@ public class statisticsPage {
 				+"\n200 day average    " + movingAverage200.getText()
 				+"\nDividend yield     " + dividendYield.getText()
 				+"\n5 year avg. yield  " + averageYield5.getText()
+				+"\nPayout ratio     " + payoutRatio.getText()
 				+"\n"
 				+"\nValuation Measures"
 				+"\nMarket Cap is      " + marketCap.getText()
