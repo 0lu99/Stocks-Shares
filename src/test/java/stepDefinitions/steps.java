@@ -21,14 +21,15 @@ public class steps {
 
 	@Given("I open Goolge Chrome")
 	public void i_open_Goolge_Chrome() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//Driver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		Thread.sleep(500);
-		driver.manage().window().fullscreen();
-
+		
 		page1 = new homePage(driver);
 		page2 = new statisticsPage(driver);
+		
+		driver.manage().window().maximize();
 
 	}
 
@@ -46,12 +47,12 @@ public class steps {
 		page1.typeStock(stockName);
 		Thread.sleep(1500);
 		page1.clickSearch();
-		Thread.sleep(1500);
 
 	}
 
 	@When("I go to the statistics tab")
 	public void i_go_to_the_statistics_tab() throws InterruptedException {
+		Thread.sleep(3000);
 		page2.statisticsTab();
 		Thread.sleep(1500);
 
@@ -64,7 +65,7 @@ public class steps {
 	
 	@Then("I close the browser")
 	public void i_close_the_browser() throws IOException {
-		driver.quit();
+		driver.close();
 	}
 
 }

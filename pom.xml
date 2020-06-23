@@ -94,10 +94,11 @@
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
+			<groupId>com.sun</groupId>
+			<artifactId>tools</artifactId>
+			<version>1.6</version>
+			<scope>system</scope>
+			<systemPath>C:\Program Files\Java\jdk1.8.0_92\lib\tools.jar</systemPath>
 		</dependency>
 
 		

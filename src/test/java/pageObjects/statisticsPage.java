@@ -1,10 +1,13 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class statisticsPage {
 
@@ -13,47 +16,77 @@ public class statisticsPage {
 	@FindBy (xpath = "//span[contains(text(),'Statistics')]")
 	@CacheLookup
 	WebElement statisticsTab;
+	
+	/*
+	 * Stock Name
+	 */
 
-	@FindBy (xpath = "//h1[1]")
+	@FindBy (css = ".Fz\\(18px\\)")
 	@CacheLookup
 	WebElement companyName;
+	
+	/*
+	 * Valuation measures
+	 */
 
-	@FindBy (xpath = "//div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]")
+	@FindBy (css = ".fi-row:nth-child(1) > .Fw\\(500\\)")
 	@CacheLookup
 	WebElement marketCap;
-
-	@FindBy (xpath = "//div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]")
+	
+	@FindBy (css = ".fi-row:nth-child(2) > .Fw\\(500\\)")
 	@CacheLookup
 	WebElement enterpriseValue;
-
-	@FindBy (xpath = "//div[5]/div[1]/table[1]/tbody[1]/tr[3]/td[2]")
+	
+	@FindBy (css = ".fi-row:nth-child(2) > .Fw\\(500\\)")
 	@CacheLookup
-	WebElement totalDebt;
+	WebElement forwardPE;
+	
+	/*
+	 * Income Statement
+	 */
 
-	@FindBy (xpath = "//div[5]/div[1]/table[1]/tbody[1]/tr[1]/td[2]")
+	@FindBy (css = ".Mb\\(10px\\) > .Pos\\(r\\):nth-child(2) .Bxz\\(bb\\):nth-child(1) > .Fw\\(500\\)")
 	@CacheLookup
-	WebElement totalCash;
-
-	@FindBy (xpath = "//div[3]/div[1]/div[1]/span[1]")
+	WebElement profitMargin;
+	
+	@FindBy (css = ".Pos\\(r\\):nth-child(4) .Bxz\\(bb\\):nth-child(7) > .Fw\\(500\\)")
 	@CacheLookup
-	WebElement currentPrice;
-
-	@FindBy (xpath = "//div[2]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[7]/td[2]")
-	@CacheLookup
-	WebElement movingAverage200;
-
-	@FindBy (xpath = "//div[2]/div[1]/div[3]/div[1]/table[1]/tbody[1]/tr[2]/td[2]")
+	WebElement eps;
+	
+	
+	/*
+	 * Dividends & Splits
+	 */
+	
+	@FindBy (css = ".Pstart\\(20px\\) > .Pos\\(r\\):nth-child(3) .Bxz\\(bb\\):nth-child(2) > .Fw\\(500\\)")
 	@CacheLookup
 	WebElement dividendYield;
-
-	@FindBy (xpath = "//div[3]/div[1]/table[1]/tbody[1]/tr[5]/td[2]")
+	
+	@FindBy (css = ".Pos\\(r\\):nth-child(3) > div > div > .W\\(100\\%\\) .Bxz\\(bb\\):nth-child(6) > .Fw\\(500\\)")
+	@CacheLookup
+	WebElement payoutRatio;
+	
+	@FindBy (css = ".Pos\\(r\\):nth-child(3) > div > div > .W\\(100\\%\\) .Bxz\\(bb\\):nth-child(5) > .Fw\\(500\\)")
 	@CacheLookup
 	WebElement averageYield5;
 	
-	@FindBy (xpath = "//div[3]/div[1]/table[1]/tbody[1]/tr[6]/td[2]")
-	@CacheLookup
-	WebElement payoutRatio;
 
+	/*
+	 * Balance Sheet
+	 */
+	@FindBy (css = ".Pos\\(r\\):nth-child(5) .Bxz\\(bb\\):nth-child(3) > .Fw\\(500\\)")
+	@CacheLookup
+	WebElement totalDebt;
+
+	@FindBy (css = ".Pos\\(r\\):nth-child(5) .Bxz\\(bb\\):nth-child(1) > .Fw\\(500\\)")
+	@CacheLookup
+	WebElement totalCash;
+	
+	@FindBy (css = ".Pos\\(r\\):nth-child(6) .Bxz\\(bb\\):nth-child(1) > .Fw\\(500\\)")
+	@CacheLookup
+	WebElement operatingCashFlow;
+
+	
 
 	public statisticsPage(WebDriver driver1) {
 		driver = driver1;
@@ -67,22 +100,28 @@ public class statisticsPage {
 	public void getEnterpriseValue() {
 
 
-		System.out.println(companyName.getText()
+		System.out.println(
+				companyName.getText()
 				+"\n"
-				+"\nTrading Information"
-				+"\nStock price        " + currentPrice.getText()
-				+"\n200 day average    " + movingAverage200.getText()
+				+"\nTrading Information:"
+				+"\nForward P/E        " + forwardPE.getText()
 				+"\nDividend yield     " + dividendYield.getText()
 				+"\n5 year avg. yield  " + averageYield5.getText()
-				+"\nPayout ratio     " + payoutRatio.getText()
+				+"\nPayout ratio       " + payoutRatio.getText()
 				+"\n"
-				+"\nValuation Measures"
+				+"\nValuation Measures:"
 				+"\nMarket Cap is      " + marketCap.getText()
 				+"\nEnterprise is      " + enterpriseValue.getText()
 				+"\n"
-				+"\nBalance Sheet"
+				+"\nIncome Statement:"
+				+"\nProfit Margin      " + profitMargin.getText()
+				+"\nDiluted EPS        " + eps.getText()
+				+"\n"
+				+"\nBalance Sheet:"
 				+"\nTotal cash is      " + totalCash.getText()
-				+"\nTotal debt is      " + totalDebt.getText());
+				+"\nTotal debt is      " + totalDebt.getText()
+				+"\nOp. cash flow      " + operatingCashFlow.getText()
+				);
 
 	}
 

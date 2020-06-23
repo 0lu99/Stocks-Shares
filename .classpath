@@ -23,12 +23,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/olu/Desktop/seleniumFiles/client-combined-3.141.59-sources.jar"/>
-	<classpathentry kind="lib" path="/Users/olu/Desktop/seleniumFiles/client-combined-3.141.59.jar"/>
-	<classpathentry kind="lib" path="/Users/olu/Desktop/seleniumFiles/libs/byte-buddy-1.8.15.jar"/>
-	<classpathentry kind="lib" path="/Users/olu/Desktop/seleniumFiles/libs/commons-exec-1.3.jar"/>
-	<classpathentry kind="lib" path="/Users/olu/Desktop/seleniumFiles/libs/guava-25.0-jre.jar"/>
-	<classpathentry kind="lib" path="/Users/olu/Desktop/seleniumFiles/libs/okhttp-3.11.0.jar"/>
-	<classpathentry kind="lib" path="/Users/olu/Desktop/seleniumFiles/libs/okio-1.14.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
