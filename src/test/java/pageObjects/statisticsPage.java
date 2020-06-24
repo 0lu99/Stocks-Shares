@@ -13,7 +13,7 @@ public class statisticsPage {
 
 	public WebDriver driver;
 
-	@FindBy (xpath = "//span[contains(text(),'Statistics')]")
+	@FindBy (xpath = "//span[contains(text(),'Statistic')]")
 	@CacheLookup
 	WebElement statisticsTab;
 	
