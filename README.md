@@ -4,7 +4,8 @@ Before investing in a company, it's always good to take a look at the fundamenta
 This can easily become a tedious task especially when reviewing multiple establishments. 
 This program helps to gather the fundamentals of companies by scraping the necessary web elements and printing them in the console.
 
-- [Getting Started](#heading)
+## Table of Contents
+- [Getting Started](#Getting-Started)
     * [Prerequisites](#Prerequisites)
     * [Cloning](#Cloning)
 - [Built with](#Built-with)
