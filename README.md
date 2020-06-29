@@ -18,7 +18,7 @@ These instructions will get you a copy of this project up and running on your lo
 ### Prerequisites
 - Java SE
 - Java SDK
-- Eclipse or an alternative Java IDE
+- Eclipse
 
 ### Cloning
 Option 1: Through terminal / cmd
