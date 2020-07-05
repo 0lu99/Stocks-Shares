@@ -45,7 +45,7 @@ Option 2: Through Eclipse IDE
 
 ## Feature file
 A feature file consists of a high level description of the scenario that's to be tested. It's written in a language called Gherkin making it easy to understand from all perspectives. I have made use of a scenario outline which allows me to execute the same test scenario for multiple sets of data which I provide through a table
-> The feature file can be found at [_...YahooFinanceScraper_Java/Features/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/Features)
+> The feature file can be found at [_.../Features/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/Features)
 
 ## Classes
 ### Page Object Model
