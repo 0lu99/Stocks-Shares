@@ -13,6 +13,10 @@ This program helps to gather the fundamentals of companies by scraping the neces
     * [Cloning](#Cloning)
 - [Built with](#Built-with)
 - [How to use](#How-to-use)
+- [Classes](#Classes)
+   * [Page Object Model](#Page-Object-Model)
+   * [Step definitions](#Step-definitions)
+   * [Test runner](#Test-runner)
 
 
 ## Getting Started
@@ -37,6 +41,22 @@ Option 2: Through Eclipse IDE
 - [Maven](https://maven.apache.org/) - Build automation tool
 - [Cucumber](https://cucumber.io/docs/cucumber/) - To help assist BDD through its language parser, Gherkin
 - [Selenium](https://www.selenium.dev/) - Collection of tools to automate web browser actions
+
+## Classes
+### Page Object Model
+Page object model is a common design pattern when writing automation scripts that's used to create an object repository for elements on a web page. It is used to store these web elements as variables as well as creating methods that will peform actions using those elements. The main advantages of using this pattern is that is helps to reduce duplication and increaes reusability by making use of the same web element in different classes and it also helps test maintainance. If each web page throughout the test journey has their own page object model, it'll be easier to keep track of where everything is.
+
+For this project I make use of 2 POM classes, one for the page where the user will search for the stock and the second for the page the user will get the stock info from.
+
+To support Page Object Model Page Facotry, an extension to Page Object is used to help initialise the web element variables like so:
+```java
+@FindBy (xpath = "//li[7]//a[1]//span[1]")
+@CacheLookup
+WebElement financialsTab;
+```
+> The POM classes can be found at _YahooFinanceScraper_Java/src/test/java/pageObjects/_
+
+
 
 ## How to use
 This project makes use of Scenario Outline - a Gherkin reference - which will iterate through the same process until it has taken each row in the Examples section beneath it into account.
