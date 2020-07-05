@@ -15,8 +15,8 @@ This program helps to gather the fundamentals of companies by scraping the neces
 - [How to use](#How-to-use)
 - [Classes](#Classes)
    * [Page Object Model](#Page-Object-Model)
-   * [Step definitions](#Step-definitions)
-   * [Test runner](#Test-runner)
+   * [Step definitions](#Step-Definitions)
+   * [Test runner](#Test-Runner)
 
 
 ## Getting Started
@@ -54,7 +54,17 @@ To support Page Object Model Page Facotry, an extension to Page Object is used t
 @CacheLookup
 WebElement financialsTab;
 ```
-> The POM classes can be found at _YahooFinanceScraper_Java/src/test/java/pageObjects/_
+> The POM classes can be found at [_...Java/src/test/java/pageObjects/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/pageObjects)
+
+### Step Defintions
+This is where the code to carry out the autonomous actions are written. The steps in the cucumber feature file are directly mapped to the step definitions that in turn execute a block of code that gets executed when each scenario is ran.
+> The step definition class can be found at [_...Java/src/test/java/stepDefinitions/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/stepDefinitions)
+
+
+### Test Runner
+The test runner class defines the location of the feature file and 'glues' it up with the step definition class. It also provides the metadata information that's needed to suucessfully execute the tests.
+
+> The step definition class can be found at [_...Java/src/test/java/testRunner/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/testRunner)
 
 
 
