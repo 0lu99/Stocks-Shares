@@ -13,6 +13,7 @@ This program helps to gather the fundamentals of companies by scraping the neces
     * [Cloning](#Cloning)
 - [Built with](#Built-with)
 - [How to use](#How-to-use)
+- [Feature file](#Feature-file)
 - [Classes](#Classes)
    * [Page Object Model](#Page-Object-Model)
    * [Step definitions](#Step-Definitions)
@@ -42,6 +43,10 @@ Option 2: Through Eclipse IDE
 - [Cucumber](https://cucumber.io/docs/cucumber/) - To help assist BDD through its language parser, Gherkin
 - [Selenium](https://www.selenium.dev/) - Collection of tools to automate web browser actions
 
+## Feature file
+A feature file consists of a high level description of the scenario that's to be tested. It's written in a language called Gherkin making it easy to understand from all perspectives. I have made use of a scenario outline which allows me to execute the same test scenario for multiple sets of data which I provide through a table
+> The feature file can be found at [_...YahooFinanceScraper_Java/Features/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/Features)
+
 ## Classes
 ### Page Object Model
 Page object model is a common design pattern when writing automation scripts that's used to create an object repository for elements on a web page. It is used to store these web elements as variables as well as creating methods that will peform actions using those elements. The main advantages of using this pattern is that is helps to reduce duplication and increaes reusability by making use of the same web element in different classes and it also helps test maintainance. If each web page throughout the test journey has their own page object model, it'll be easier to keep track of where everything is.
@@ -57,19 +62,17 @@ WebElement financialsTab;
 > The POM classes can be found at [_...Java/src/test/java/pageObjects/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/pageObjects)
 
 ### Step Defintions
-This is where the code to carry out the autonomous actions are written. The steps in the cucumber feature file are directly mapped to the step definitions that in turn execute a block of code that gets executed when each scenario is ran.
+This is where the code to carry out the autonomous actions are written. The steps in the cucumber feature file are directly mapped to the step definitions that in turn executes a block of code that gets executed when each scenario is ran.
 > The step definition class can be found at [_...Java/src/test/java/stepDefinitions/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/stepDefinitions)
 
 
 ### Test Runner
 The test runner class defines the location of the feature file and 'glues' it up with the step definition class. It also provides the metadata information that's needed to suucessfully execute the tests.
-
-> The step definition class can be found at [_...Java/src/test/java/testRunner/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/testRunner)
-
+> The test runner class can be found at [_...Java/src/test/java/testRunner/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/testRunner)
 
 
 ## How to use
-This project makes use of Scenario Outline - a Gherkin reference - which will iterate through the same process until it has taken each row in the Examples section beneath it into account.
+As mentioned, this project makes use of Scenario Outline - a Gherkin reference - which will iterate through the same process until it has taken each row in the Examples section beneath it into account.
 In order to search for the individual stocks of your choice, all you need to do is edit/add stocks to the examples table within the feature file:
 
 ![featureFileGif](http://g.recordit.co/e8IdTXAeho.gif)
