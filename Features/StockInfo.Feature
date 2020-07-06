@@ -10,8 +10,6 @@ Feature: Getting Stock Information
 
 	Examples:
 		|stockName|
-		| BDEV.L | 
-		| NKE | 
 		| MSFT | 
-		| TSLA | 
+
 		
