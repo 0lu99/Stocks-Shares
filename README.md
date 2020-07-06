@@ -77,6 +77,6 @@ In order to search for the individual stocks of your choice, all you need to do 
 
 ![featureFileGif](http://g.recordit.co/e8IdTXAeho.gif)
 
-The console we then return a specified list of fundamentals for Coca-Cola (KO), Pepsi (PEP), Nikola (NKLA) and Paypal (PYPL):
+For the purpose of the length of the GIF, this scenario shows the event a user searches for Microsoft (MSFT):
 
-![consoleOutputGif](http://g.recordit.co/R5EYQS8tZp.gif)
+![YahooFinanceGif](YahooFinanceGif.gif)
