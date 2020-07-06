@@ -61,7 +61,7 @@ WebElement financialsTab;
 ```
 > The POM classes can be found at [_...Java/src/test/java/pageObjects/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/pageObjects)
 
-### Step Defintions
+### Step Definitions
 This is where the code to carry out the autonomous actions are written. The steps in the cucumber feature file are directly mapped to the step definitions that in turn executes a block of code that gets executed when each scenario is ran.
 > The step definition class can be found at [_...Java/src/test/java/stepDefinitions/_](https://github.com/0lu99/YahooFinanceScraper_Java/tree/master/src/test/java/stepDefinitions)
 
