@@ -77,6 +77,6 @@ In order to search for the individual stocks of your choice, all you need to do 
 
 ![featureFileGif](http://g.recordit.co/e8IdTXAeho.gif)
 
-For the purpose of the length of the GIF, this scenario shows the event a user searches for Microsoft (MSFT):
+For the purpose of the length of the GIF, this scenario shows the event a user wants to get information for Microsoft (MSFT):
 
 ![YahooFinanceGif](YahooFinanceGif.gif)
