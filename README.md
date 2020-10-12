@@ -4,9 +4,6 @@ Before investing in a company, it's always good to take a look at the fundamenta
 This can easily become a tedious task especially when reviewing multiple establishments. 
 This program helps to gather the fundamentals of companies by scraping the necessary web elements and printing them in the console.
 
-![Java CI with Maven](https://github.com/0lu99/YahooFinanceScraper_Java/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
-
-
 ## Table of Contents
 - [Getting Started](#Getting-Started)
     * [Prerequisites](#Prerequisites)
